@@ -761,9 +761,9 @@ class TcpConnection extends ConnectionInterface implements \JsonSerializable
         }*/
 
         if ($async) {
-            $type = \STREAM_CRYPTO_METHOD_SSLv2_CLIENT | \STREAM_CRYPTO_METHOD_SSLv23_CLIENT;
+            $type = \STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT;
         } else {
-            $type = \STREAM_CRYPTO_METHOD_SSLv2_SERVER | \STREAM_CRYPTO_METHOD_SSLv23_SERVER;
+            $type = \STREAM_CRYPTO_METHOD_TLSv1_3_SERVER;
         }
 
         // Hidden error.
